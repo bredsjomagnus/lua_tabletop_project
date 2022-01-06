@@ -1,0 +1,183 @@
+local func = {}
+
+
+function func.countvalues(t)
+
+  local count = 0
+  for k, v in pairs(t) do
+    if v != nil then
+      count = count + 1
+    end
+  end
+
+  return count
+end
+
+
+function tableHasKey(table,key)
+    return table[key] ~= nil
+end
+
+function get_cost(terrain, edge, mp_type)
+  if edge == "road" then
+    return 1
+  end
+  if mp_type == "inf" then
+    if terrain == "clear" or terrain == "broken" or terrain == "woods" or terrain == "road" or terrain == "city" then
+      return 1
+    end
+
+    if terrain == "forest" then
+      return 2
+    end
+  end
+
+  if mp_type == "mech" then
+    if terrain == "clear" or terrain == "road" or terrain == "city" then
+      return 1
+    end
+
+    if terrain == "broken" then
+      return 2
+    end
+
+    if terrain == "woods" then
+      return 3
+    end
+
+    if terrain == "forest" then
+      return 4
+    end
+  end
+
+end
+
+-- TAR BORT WHITESPACE FRÅN s
+function func.trim(s)
+   return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+function func.split(inputstr, sep)
+  -- funktion som skapar en table av en text där första radbrytningen
+  -- är ny rad och den andra radbrytingen kommer via parametern 'sep'
+    if sep == nil then
+            sep = "%s"
+    end
+    local t={}
+    local i = 0-- räknare i inre loopen
+    local key = "" -- table key
+    local value = "" -- table value
+
+    -- första separatorn är ny rad
+    for str in string.gmatch(inputstr, "([^\n]+)") do
+      -- str är nu en rad i ryggsäckens beskrivning, ex 'Vatten: 1'
+
+      -- Påbörjar ny räkning
+      i = 0
+      for t in string.gmatch(str, "([^"..sep.."]+)") do
+        -- splittar upp str med 'sep' som separator
+
+        -- det första värdet skall vara key
+        -- det andra värdet skall vara value
+        if i % 2 == 0 then
+          key = t
+        else
+          value = t
+        end
+        i =  i + 1
+      end
+      -- print(key..": "..value)
+
+      -- trimmar value och lägger till key: value par i tabellen
+      -- value = trim(value)
+      t[key] = value
+    end
+    return t
+end
+
+function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_tint)
+
+  -- local mp = 3
+  -- local mp_type = "inf"
+  -- local unit_army = "allied"
+  local dutt_color = {}
+  if unit_army == "allied" then
+    dutt_color = {(255 - (color_tint-1)*50)/255, (0 + (color_tint-1)*20)/255, (242 - (color_tint-1)*5)/255, 1}
+  else
+    dutt_color = {(240 - (color_tint-1)*40)/255, 67/255, (14 + (color_tint-1)*20)/255, 1}
+  end
+
+
+  local frontier = pqueue()
+  frontier[start] = 0
+
+  local came_from = {}
+  came_from[start] = nil
+
+  local cost_so_far = {}
+  cost_so_far[start] = 0
+
+  --print(frontier.min())
+
+  while not frontier.empty() do
+    local currentHex = frontier.min() -- hämtar den hexagon med minst kostnad
+    frontier.remove(currentHex)
+    --print(hex_neighbours[currentHex]) -- table med currentHex grannars hex_GUIDs
+    for i, next in ipairs(hex_neighbours[currentHex]) do
+      if next then
+        local edge = hex_edges[currentHex][i]
+        local next_cost = get_cost(hex_terrain[next], edge, mp_type)
+        -- print(next_cost)
+        --print(mp_type .." " .. hex_edges[currentHex][i] .." -> ".. hex_terrain[next] .. " kostar ".. next_cost)
+
+        local actual_mp = mp
+
+        local new_cost = cost_so_far[currentHex] + next_cost
+
+        if not tableHasKey(cost_so_far, next) or new_cost < cost_so_far[next] then
+          -- print("new_cost: ".. new_cost)
+          -- print("next: "..next)
+          -- print(cost_so_far[next])
+          -- print(tableHasKey(cost_so_far, next))
+
+          if new_cost <= actual_mp then
+            print("new_cost: "..new_cost)
+            print("actual_mp: "..actual_mp)
+            cost_so_far[next] = new_cost
+            table.insert(cost_so_far, {next = new_cost})
+            local priority = new_cost
+            frontier[next] = priority
+            print(#cost_so_far)
+            local zone = getObjectFromGUID(next)
+            zone_pos = zone.getPosition()
+            -- zone_pos.x = zone_pos.x - color_tint*0.98
+            local dutt = spawnObject({type="BlockSquare", position=zone_pos, sound=false})
+            dutt.setScale({0.2,0.2,0.2})
+            dutt.setName("proxilidutt for "..unit_name)
+            dutt.setColorTint(dutt_color)
+
+          end
+
+          -- print("cost_so_far["..next.."]: ".. cost_so_far[next])
+          -- if new_cost < cost_so_far[next] then
+          --
+          -- end
+        end
+
+
+
+      end
+
+      -- print(hex_edges[currentHex][i] .." -> ".. hex_terrain[next] .. " kostar ".. next_cost)
+      -- print("Next cost: "..next_cost)
+    end
+  end
+
+  print("COST_SO_FAR: "..#cost_so_far)
+  -- for _, hex in ipairs(cost_so_far) do
+  --   print(hex[0])
+  -- end
+
+end
+
+return func

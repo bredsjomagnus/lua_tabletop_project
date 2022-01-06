@@ -1,0 +1,65 @@
+-- GÖR EN JSON:ISH SKRIVEN NOTE TILL EN TABLE
+function note_to_table(note_guid)
+  local notelist = getObjectFromGUID(note_guid)
+  local notelist_content = notelist.getDescription()
+
+  -- gör en tabell av combatgear innehåll, 'Vatten:1, Fältransoner:3,...'
+  local note_table = split(notelist_content, ":")
+
+  return note_table
+end
+
+-- TAR BORT WHITESPACE FRÅN s
+function trim(s)
+   return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+function stringify_desc(table)
+  -- Behållar för nya backpack beskrivningen
+  local desc = ""
+  for k, v in pairs(table) do
+    desc = desc..k..": "..v.."\n"
+  end
+  return desc
+end
+
+-- LÄSER IN DESCRIPTION FRÅN EN NOTE OCH DELAR FÖRST UPP FÖR NY RAD
+-- OCH SEN SPLITTAR FÖR KOLON SÅ ATT MAN FÅR EN TABELL MED key: value
+-- SOM RESULTAT
+function split(inputstr, sep)
+  -- funktion som skapar en table av en text där första radbrytningen
+  -- är ny rad och den andra radbrytingen kommer via parametern 'sep'
+    if sep == nil then
+            sep = "%s"
+    end
+    local t={}
+    local i = 0-- räknare i inre loopen
+    local key = "" -- table key
+    local value = "" -- table value
+
+    -- första separatorn är ny rad
+    for str in string.gmatch(inputstr, "([^\n]+)") do
+      -- str är nu en rad i ryggsäckens beskrivning, ex 'Vatten: 1'
+
+      -- Påbörjar ny räkning
+      i = 0
+      for t in string.gmatch(str, "([^"..sep.."]+)") do
+        -- splittar upp str med 'sep' som separator
+
+        -- det första värdet skall vara key
+        -- det andra värdet skall vara value
+        if i % 2 == 0 then
+          key = t
+        else
+          value = t
+        end
+        i =  i + 1
+      end
+      -- print(key..": "..value)
+
+      -- trimmar value och lägger till key: value par i tabellen
+      value = trim(value)
+      t[key] = value
+    end
+    return t
+end

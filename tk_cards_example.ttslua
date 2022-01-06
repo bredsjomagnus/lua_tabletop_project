@@ -1,0 +1,179 @@
+new_zone_GUID = "e6a165"
+init_zone_GUID = "5f0ad0"
+player_tokens_GUID = "599332"
+counter_GUID = "918ffa"
+card_order = {
+  "H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H10",
+  "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10",
+}
+players_table = {}
+num_players = 0
+function onLoad()
+
+    --Creates the 3 buttons
+    self.createButton({
+        label="1. Ta fram initiativkort", click_function="get_init_cards",
+        function_owner=self, position={4,0.5,0},
+        height=1000, width=10000, font_size=1000, rotation={0,90,0}, color={135/255,120/255,92/255}
+    })
+    --Creates the 3 buttons
+    self.createButton({
+        label="4. Ta tillbaka initativkorten", click_function="bring_back_cards",
+        function_owner=self, position={-2,0.5,0},
+        height=1000, width=10000, font_size=1000, rotation={0,90,0}, color={135/255,120/255,92/255}
+    })
+    self.createButton({
+        label="3. Dela ut korten", click_function="deal_cards",
+        function_owner=self, position={0,0.5,0},
+        height=1000, width=10000, font_size=1000, rotation={0,90,0}, color={135/255,120/255,92/255}
+    })
+    self.createButton({
+        label="2. Blanda", click_function="shuffle_cards",
+        function_owner=self, position={2,0.5,0},
+        height=1000, width=10000, font_size=1000, rotation={0,90,0}, color={135/255,120/255,92/255}
+    })
+
+end
+
+function shuffle_cards()
+  new_deck = getDeckFromZone(new_zone_GUID)
+  new_deck.shuffle()
+end
+
+function getDeckFromZone(zone_GUID)
+  -- hämtar initativkortleken
+  local zone = getObjectFromGUID(zone_GUID)
+  local objectsInZone = zone.getObjects()
+  local deck = nil
+  for c, o in ipairs(objectsInZone) do
+    deck = getObjectFromGUID(o.guid)
+    break
+  end
+  return deck
+end
+
+function tlen(table)
+
+  local count = 0
+  for _,o in ipairs(table) do
+    count = count + 1
+  end
+  return count
+end
+
+function get_players()
+  local player_tokens = getObjectFromGUID(player_tokens_GUID)
+  local objectsInZone = player_tokens.getObjects()
+
+  local name = ""
+  local index = 1
+  for c, object in ipairs(objectsInZone) do
+    name = object.getName()
+    if name == 'Player' then
+      players_table[index] = object.getDescription()
+      index = index + 1
+    end
+  end
+  num_players = index - 1
+
+end
+function deal_cards()
+  -- Card Table:
+  --
+  -- table.index = int index
+  -- table.nickname = string nickname
+  -- table.description = string description
+  -- table.guid = string guid
+  -- table.lua_script = string lua_script
+  -- hämtar nya kortleken via den zone där den hamnat
+
+
+
+  -- hämter countern med antalet initiativ kort som skall tas fram
+  local counter = getObjectFromGUID(counter_GUID)
+  -- hämtar värdet från countern
+  local counter_value = counter.getValue()
+
+  deck = getDeckFromZone(new_zone_GUID)
+  deck.shuffle()
+  -- print("players[1]: ", players[1])
+  cards = deck.getObjects()
+  -- local number_of_players = tlen(players)
+
+  -- for k, v in pairs(players_table) do
+  --   deck.deal(1, v)
+  -- end
+
+  -- dela ut kort till spelarna som skall ha ett kort
+  for i = 1, num_players, 1 do
+    deck.deal(1, players_table[i])
+  end
+
+  -- dela ut resterande kort till spelledaren
+  for i = 1, counter_value, 1 do
+    deck.deal(1, "Purple")
+  end
+end
+
+-- TA TILLBAKA KORTEN FRÅN SPELARNA TILL KORTLEKEN
+function bring_back_cards()
+  -- Hämta initdeck och lås upp kortleken samt ta fram dess position
+  initdeck = getDeckFromZone(init_zone_GUID)
+  initdeck.setLock(false)
+  deckPos = initdeck.getPosition()
+
+  -- Hämta alla objekt i spelet
+  local allObjects = getAllObjects()
+
+  -- Leta bland alla object efter de object med description 'initcard'
+  -- och lägg tillbaka dem i kortleken.
+  for _, object in ipairs(allObjects) do
+      if object.getDescription() == 'initcard' then
+          initdeck.putObject(object)
+      end
+  end
+
+  -- blanda kortleken och lås den igen.
+  initdeck.shuffle()
+  initdeck.setLock(true)
+end
+
+-- TA UT DE KORT SOM SKALL DELAS UT TILL SPELARE OCH SPELLEDARE
+function get_init_cards()
+  players = get_players()
+
+  -- hämter countern med antalet initiativ kort som skall tas fram
+  local counter = getObjectFromGUID(counter_GUID)
+  -- hämtar värdet från countern vilket är lika med antalet grupper som spelledaren skall ha kort till
+  local counter_value = counter.getValue()
+
+  -- hämtar initativkortleken
+  initdeck = getDeckFromZone(init_zone_GUID)
+  -- hämtar initativkortleken
+  local new_zone = getObjectFromGUID(new_zone_GUID)
+
+  -- initativlekens position
+  local pos = new_zone.getPosition()
+  --positionsförändringar i förhållande till initativkortleken
+  -- pos.y = pos.y + 1
+  -- pos.z = pos.z + 5
+
+  -- hämtar alla korten i initativkortleken
+  local initcards = initdeck.getObjects()
+
+  -- Ta ut lika många kort som det finns spelare och som
+  -- countern visar att spelledaren skall styra.
+  for i = 1, counter_value+num_players, 1 do
+    -- plocka fram vilket som nästkommande sökta kort att hitta
+    searched_card = card_order[i]
+    -- Gå igenom kortleken och leta efter det eftersökta kortet.
+    for i, card in ipairs(initcards) do
+        if card.nickname == searched_card then
+          initdeck.takeObject({
+              position=pos, guid=card.guid
+          })
+          break
+        end
+    end
+  end
+end
