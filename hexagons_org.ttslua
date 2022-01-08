@@ -1,0 +1,604 @@
+
+hexagons = {}
+
+hex_terrain = {}
+hex_edges = {}
+hex_neighbours = {}
+hex_city = {}
+hex_town = {}
+hex_westwall = {}
+hex_vp = {}
+hex_hv = {}
+hex_allied_position = {}
+hex_units = {}
+hex_control = {}
+hex_primary_forward = {}
+hex_secondary_forward = {}
+hex_withdraw = {}
+
+-- 0812
+hex_terrain["fb2ee6"] = "forest"
+hex_edges["fb2ee6"] = {"bridge", "bridge", "forest", "road", "road", "woods"}
+hex_neighbours["fb2ee6"] = {"ac1ab4", "bfec17", "e2c7d6", "d12a45", "393c5c", "6e8470"}
+hex_city["fb2ee6"] = false
+hex_town["fb2ee6"] = true
+hex_westwall["fb2ee6"] = false
+hex_vp["fb2ee6"] = 5
+hex_hv["fb2ee6"] = 6
+hex_allied_position["fb2ee6"] = true
+hex_units["fb2ee6"] = {}
+hex_control["fb2ee6"] = {}
+hex_primary_forward["fb2ee6"] = "bfec17"
+hex_secondary_forward["fb2ee6"] = "d12a45"
+hex_withdraw["fb2ee6"] = "ac1ab4"
+
+-- 0813
+hex_terrain["393c5c"] = "broken"
+hex_edges["393c5c"] = {"woods", "road", "forest", "woods", "road", "forest"}
+hex_neighbours["393c5c"] = {"6e8470", "fb2ee6", "d12a45", "4b524c", nil, nil}
+hex_city["393c5c"] = false
+hex_town["393c5c"] = false
+hex_westwall["393c5c"] = false
+hex_vp["393c5c"] = 0
+hex_hv["393c5c"] = 0
+hex_allied_position["393c5c"] = false
+hex_units["393c5c"] = {}
+hex_control["393c5c"] = {}
+hex_primary_forward["393c5c"] = "fb2ee6"
+hex_secondary_forward["393c5c"] = "4b524c"
+hex_withdraw["393c5c"] = nil
+
+-- 0914
+hex_terrain["4b524c"] = "woods"
+hex_edges["4b524c"] = {"broken", "forest", "forest", "broken", "forest", "forest"}
+hex_neighbours["4b524c"] = {"393c5c", "d12a45", "b0f0fc", "c6a041", nil, nil}
+hex_city["4b524c"] = false
+hex_town["4b524c"] = false
+hex_westwall["4b524c"] = false
+hex_vp["4b524c"] = 0
+hex_hv["4b524c"] = 0
+hex_allied_position["4b524c"] = false
+hex_units["4b524c"] = {}
+hex_control["4b524c"] = {}
+hex_primary_forward["4b524c"] = "b0f0fc"
+hex_secondary_forward["4b524c"] = "393c5c"
+hex_withdraw["4b524c"] = nil
+
+
+-- 0913
+hex_terrain["d12a45"] = "forest"
+hex_edges["d12a45"] = {"road", "forest", "broken", "road", "woods", "broken"}
+hex_neighbours["d12a45"] = {"fb2ee6", "e2c7d6", "6cfeeb", "b0f0fc", "4b524c", "393c5c"}
+hex_city["d12a45"] = false
+hex_town["d12a45"] = false
+hex_westwall["d12a45"] = false
+hex_vp["d12a45"] = 0
+hex_hv["d12a45"] = 2
+hex_allied_position["d12a45"] = false
+hex_units["d12a45"] = {}
+hex_control["d12a45"] = {}
+hex_primary_forward["d12a45"] = "b0f0fc"
+hex_secondary_forward["d12a45"] = "6cfeeb"
+hex_withdraw["d12a45"] = "4b524c"
+
+-- 0912
+hex_terrain["e2c7d6"] = "forest"
+hex_edges["e2c7d6"] = {"river", "river", "forest", "broken", "forest", "forest"}
+hex_neighbours["e2c7d6"] = {"bfec17", "f37470", "9dc118", "6cfeeb", "d12a45", "fb2ee6"}
+hex_city["e2c7d6"] = false
+hex_town["e2c7d6"] = false
+hex_westwall["e2c7d6"] = false
+hex_vp["e2c7d6"] = 0
+hex_hv["e2c7d6"] = 2
+hex_allied_position["e2c7d6"] = false
+hex_units["e2c7d6"] = {}
+hex_control["e2c7d6"] = {}
+hex_primary_forward["e2c7d6"] = "6cfeeb"
+hex_secondary_forward["e2c7d6"] = nil
+hex_withdraw["e2c7d6"] = nil
+
+
+-- 0911
+hex_terrain["f37470"] = "forest"
+hex_edges["f37470"] = {"woods", "woods", "road", "river", "river", "road"}
+hex_neighbours["f37470"] = {nil, "585730", "02bd93", "9dc118", "e2c7d6", "bfec17"}
+hex_city["f37470"] = false
+hex_town["f37470"] = false
+hex_westwall["f37470"] = false
+hex_vp["f37470"] = 0
+hex_hv["f37470"] = 2
+hex_allied_position["f37470"] = false
+hex_units["f37470"] = {}
+hex_control["f37470"] = {}
+hex_primary_forward["f37470"] = "02bd93"
+hex_secondary_forward["f37470"] = "585730"
+hex_withdraw["f37470"] = nil
+
+-- 0910
+hex_terrain["585730"] = "woods"
+hex_edges["585730"] = {"woods", "woods", "clear", "forest", "forest", "woods"}
+hex_neighbours["585730"] = {nil, nil, "5839d5", "02bd93", "f37470", "c87b6d"}
+hex_city["585730"] = false
+hex_town["585730"] = false
+hex_westwall["585730"] = false
+hex_vp["585730"] = 0
+hex_hv["585730"] = 1
+hex_allied_position["585730"] = false
+hex_units["585730"] = {}
+hex_control["585730"] = {}
+hex_primary_forward["585730"] = "5839d5"
+hex_secondary_forward["585730"] = nil
+hex_withdraw["585730"] = nil
+
+-- 1014
+hex_terrain["c6a041"] = "broken"
+hex_edges["c6a041"] = {"woods", "road", "road", "woods", "road", "road"}
+hex_neighbours["c6a041"] = {"4b524c", "b0f0fc", "14139c", "aa20e6", nil, nil}
+hex_city["c6a041"] = false
+hex_town["c6a041"] = true
+hex_westwall["c6a041"] = false
+hex_vp["c6a041"] = 0
+hex_hv["c6a041"] = 5
+hex_allied_position["c6a041"] = true
+hex_units["c6a041"] = {}
+hex_control["c6a041"] = {}
+hex_primary_forward["c6a041"] = "b0f0fc"
+hex_secondary_forward["c6a041"] = "14139c"
+hex_withdraw["c6a041"] = nil
+
+-- 1013
+hex_terrain["b0f0fc"] = "forest"
+hex_edges["b0f0fc"] = {"road", "broken", "road", "broken", "road", "woods"}
+hex_neighbours["b0f0fc"] = {"d12a45", "6cfeeb", "d93c33", "14139c", "c6a041", "4b524c"}
+hex_city["b0f0fc"] = false
+hex_town["b0f0fc"] = false
+hex_westwall["b0f0fc"] = false
+hex_vp["b0f0fc"] = 0
+hex_hv["b0f0fc"] = 2
+hex_allied_position["b0f0fc"] = true
+hex_units["b0f0fc"] = {}
+hex_control["b0f0fc"] = {}
+hex_primary_forward["b0f0fc"] = "d93c33"
+hex_secondary_forward["b0f0fc"] = "14139c"
+hex_withdraw["b0f0fc"] = "c6a041"
+
+-- 1012
+hex_terrain["6cfeeb"] = "broken"
+hex_edges["6cfeeb"] = {"forest", "forest", "woods", "forest", "forest", "forest"}
+hex_neighbours["6cfeeb"] = {"e2c7d6", "9dc118", "195d56", "d93c33", "b0f0fc", "d12a45"}
+hex_city["6cfeeb"] = false
+hex_town["6cfeeb"] = false
+hex_westwall["6cfeeb"] = false
+hex_vp["6cfeeb"] = 0
+hex_hv["6cfeeb"] = 0
+hex_allied_position["6cfeeb"] = false
+hex_units["6cfeeb"] = {}
+hex_control["6cfeeb"] = {}
+hex_primary_forward["6cfeeb"] = "195d56"
+hex_secondary_forward["6cfeeb"] = nil
+hex_withdraw["6cfeeb"] = nil
+
+-- 1011
+hex_terrain["9dc118"] = "forest"
+hex_edges["9dc118"] = {"river", "river", "river", "woods", "broken", "forest"}
+hex_neighbours["9dc118"] = {"f37470", "02bd93", "598613", "195d56", "6cfeeb", "e2c7d6"}
+hex_city["9dc118"] = false
+hex_town["9dc118"] = false
+hex_westwall["9dc118"] = false
+hex_vp["9dc118"] = 0
+hex_hv["9dc118"] = 2
+hex_allied_position["9dc118"] = true
+hex_units["9dc118"] = {}
+hex_control["9dc118"] = {}
+hex_primary_forward["9dc118"] = "598613"
+hex_secondary_forward["9dc118"] = "02bd93"
+hex_withdraw["9dc118"] = "6cfeeb"
+
+-- 1010
+hex_terrain["02bd93"] = "forest"
+hex_edges["02bd93"] = {"woods", "road", "broken", "road", "river", "road"}
+hex_neighbours["02bd93"] = {"585730", "5839d5", "b3de30", "598613", "9dc118", "f37470"}
+hex_city["02bd93"] = false
+hex_town["02bd93"] = false
+hex_westwall["02bd93"] = false
+hex_vp["02bd93"] = 0
+hex_hv["02bd93"] = 2
+hex_allied_position["02bd93"] = true
+hex_units["02bd93"] = {}
+hex_control["02bd93"] = {}
+hex_primary_forward["02bd93"] = "5839d5"
+hex_secondary_forward["02bd93"] = "598613"
+hex_withdraw["02bd93"] = "f37470"
+
+-- 1009
+hex_terrain["5839d5"] = "clear"
+hex_edges["5839d5"] = {"woods", "broken", "broken", "broken", "road", "woods"}
+hex_neighbours["5839d5"] = {"beccde", "6b5676", "77da8a", "b3de30", "02bd93", "585730"}
+hex_city["5839d5"] = false
+hex_town["5839d5"] = false
+hex_westwall["5839d5"] = false
+hex_vp["5839d5"] = 0
+hex_hv["5839d5"] = 0
+hex_allied_position["5839d5"] = false
+hex_units["5839d5"] = {}
+hex_control["5839d5"] = {}
+hex_primary_forward["5839d5"] = nil
+hex_secondary_forward["5839d5"] = nil
+hex_withdraw["5839d5"] = "02bd93"
+
+--1115
+hex_terrain["aa20e6"] = "woods"
+hex_edges["aa20e6"] = {"town", "broken", "woods", "broken", nil, nil}
+hex_neighbours["aa20e6"] = {"c6a041", "14139c", "a78fc0", "57bb0d", nil, nil}
+hex_city["aa20e6"] = false
+hex_town["aa20e6"] = false
+hex_westwall["aa20e6"] = false
+hex_vp["aa20e6"] = 0
+hex_hv["aa20e6"] = 1
+hex_allied_position["aa20e6"] = false
+hex_units["aa20e6"] = {}
+hex_control["aa20e6"] = {}
+hex_primary_forward["aa20e6"] = "14139c"
+hex_secondary_forward["aa20e6"] = "a78fc0"
+hex_withdraw["aa20e6"] = nil
+
+--1114
+hex_terrain["14139c"] = "broken"
+hex_edges["14139c"] = {"forest", "forest", "road", "woods", "woods", "road"}
+hex_neighbours["14139c"] = {"b0f0fc", "d93c33", "b970ef", "a78fc0", "aa20e6", "c6a041"}
+hex_city["14139c"] = false
+hex_town["14139c"] = false
+hex_westwall["14139c"] = false
+hex_vp["14139c"] = 0
+hex_hv["14139c"] = 0
+hex_allied_position["14139c"] = false
+hex_units["14139c"] = {}
+hex_control["14139c"] = {}
+hex_primary_forward["14139c"] = "b970ef"
+hex_secondary_forward["14139c"] = "d93c33"
+hex_withdraw["14139c"] = "c6a041"
+
+--1113
+hex_terrain["d93c33"] = "forest"
+hex_edges["d93c33"] = {"broken", "road", "broken", "road", "broken", "road"}
+hex_neighbours["d93c33"] = {"6cfeeb", "195d56", "bfbd8c", "b970ef", "14139c", "b0f0fc"}
+hex_city["d93c33"] = false
+hex_town["d93c33"] = false
+hex_westwall["d93c33"] = false
+hex_vp["d93c33"] = 0
+hex_hv["d93c33"] = 3
+hex_allied_position["d93c33"] = true
+hex_units["d93c33"] = {}
+hex_control["d93c33"] = {}
+hex_primary_forward["d93c33"] = "195d56"
+hex_secondary_forward["d93c33"] = "bfbd8c"
+hex_withdraw["d93c33"] = "b0f0fc"
+
+-- 1112
+hex_terrain["195d56"] = "woods"
+hex_edges["195d56"] = {"forest", "road", "broken", "broken", "road", "broken"}
+hex_neighbours["195d56"] = {"9dc118", "598613", "e463d6", "bfbd8c", "d93c33", "6cfeeb"}
+hex_city["195d56"] = false
+hex_town["195d56"] = false
+hex_westwall["195d56"] = false
+hex_vp["195d56"] = 0
+hex_hv["195d56"] = 0
+hex_allied_position["195d56"] = false
+hex_units["195d56"] = {}
+hex_control["195d56"] = {}
+hex_primary_forward["195d56"] = "598613"
+hex_secondary_forward["195d56"] = "e463d6"
+hex_withdraw["195d56"] = nil
+
+-- 1111
+hex_terrain["598613"] = "forest"
+hex_edges["598613"] = {"road", "broken", "road", "road", "road", "river"}
+hex_neighbours["598613"] = {"02bd93", "b3de30", "88168f", "e463d6", "195d56", "9dc118"}
+hex_city["598613"] = false
+hex_town["598613"] = true
+hex_westwall["598613"] = false
+hex_vp["598613"] = 2
+hex_hv["598613"] = 5
+hex_allied_position["598613"] = true
+hex_units["598613"] = {}
+hex_control["598613"] = {}
+hex_primary_forward["598613"] = "88168f"
+hex_secondary_forward["598613"] = "b3de30"
+hex_withdraw["598613"] = "195d56"
+
+
+-- 1110
+hex_terrain["b3de30"] = "broken"
+hex_edges["b3de30"] = {"clear", "broken", "clear", "broken", "forest", "forest"}
+hex_neighbours["b3de30"] = {"5839d5", nil, "f76346", "88168f", "598613", "02bd93"}
+hex_city["b3de30"] = false
+hex_town["b3de30"] = false
+hex_westwall["b3de30"] = false
+hex_vp["b3de30"] = 0
+hex_hv["b3de30"] = 0
+hex_allied_position["b3de30"] = false
+hex_units["b3de30"] = {}
+hex_control["b3de30"] = {}
+hex_primary_forward["b3de30"] = nil
+hex_secondary_forward["b3de30"] = "f76346"
+hex_withdraw["b3de30"] = "598613"
+
+-- 1215
+hex_terrain["57bb0d"] = "broken"
+hex_edges["57bb0d"] = {"woods", "road", "woods", "river", "forest", "road"}
+hex_neighbours["57bb0d"] = {"aa20e6", "a78fc0", "b4b0f5", nil, nil, nil}
+hex_city["57bb0d"] = false
+hex_town["57bb0d"] = false
+hex_westwall["57bb0d"] = false
+hex_vp["57bb0d"] = 0
+hex_hv["57bb0d"] = 0
+hex_allied_position["57bb0d"] = false
+hex_units["57bb0d"] = {}
+hex_control["57bb0d"] = {}
+hex_primary_forward["57bb0d"] = "a78fc0"
+hex_secondary_forward["57bb0d"] = "aa20e6"
+hex_withdraw["57bb0d"] = nil
+
+-- 1214
+hex_terrain["a78fc0"] = "woods"
+hex_edges["a78fc0"] = {"broken", "road", "forest", "woods", "road", "woods"}
+hex_neighbours["a78fc0"] = {"14139c", "b970ef", "290b1d", "b4b0f5", "57bb0d", "aa20e6"}
+hex_city["a78fc0"] = false
+hex_town["a78fc0"] = false
+hex_westwall["a78fc0"] = false
+hex_vp["a78fc0"] = 0
+hex_hv["a78fc0"] = 2
+hex_allied_position["a78fc0"] = true
+hex_units["a78fc0"] = {}
+hex_control["a78fc0"] = {}
+hex_primary_forward["a78fc0"] = "b970ef"
+hex_secondary_forward["a78fc0"] = "14139c"
+hex_withdraw["a78fc0"] = "57bb0d"
+
+-- 1213
+hex_terrain["b970ef"] = "broken"
+hex_edges["b970ef"] = {"road", "broken", "road", "forest", "road", "road"}
+hex_neighbours["b970ef"] = {"d93c33", "bfbd8c", "b6d331", "290b1d", "a78fc0", "14139c"}
+hex_city["b970ef"] = false
+hex_town["b970ef"] = false
+hex_westwall["b970ef"] = false
+hex_vp["b970ef"] = 0
+hex_hv["b970ef"] = 2
+hex_allied_position["b970ef"] = true
+hex_units["b970ef"] = {}
+hex_control["b970ef"] = {}
+hex_primary_forward["b970ef"] = "d93c33"
+hex_secondary_forward["b970ef"] = "b6d331"
+hex_withdraw["b970ef"] = "a78fc0"
+
+
+-- 1212
+hex_terrain["bfbd8c"] = "broken"
+hex_edges["bfbd8c"] = {"woods", "broken", "forest", "broken", "broken", "forest"}
+hex_neighbours["bfbd8c"] = {"195d56", "e463d6", "d92e91", "b6d331", "b970ef", "d93c33"}
+hex_city["bfbd8c"] = false
+hex_town["bfbd8c"] = false
+hex_westwall["bfbd8c"] = false
+hex_vp["bfbd8c"] = 0
+hex_hv["bfbd8c"] = 0
+hex_allied_position["bfbd8c"] = false
+hex_units["bfbd8c"] = {}
+hex_control["bfbd8c"] = {}
+hex_primary_forward["bfbd8c"] = "e463d6"
+hex_secondary_forward["bfbd8c"] = nil
+hex_withdraw["bfbd8c"] = nil
+
+-- 1211
+hex_terrain["e463d6"] = "broken"
+hex_edges["e463d6"] = {"road", "broken", "broken", "road", "broken", "woods"}
+hex_neighbours["e463d6"] = {"598613", "88168f", "c5b010", "d92e91", "bfbd8c", "195d56"}
+hex_city["e463d6"] = false
+hex_town["e463d6"] = false
+hex_westwall["e463d6"] = false
+hex_vp["e463d6"] = 0
+hex_hv["e463d6"] = 0
+hex_allied_position["e463d6"] = false
+hex_units["e463d6"] = {}
+hex_control["e463d6"] = {}
+hex_primary_forward["e463d6"] = "598613"
+hex_secondary_forward["e463d6"] = "88168f"
+hex_withdraw["e463d6"] = nil
+
+-- 1210
+hex_terrain["88168f"] = "broken"
+hex_edges["88168f"] = {"broken", "road", "road", "road", "broken", "road"}
+hex_neighbours["88168f"] = {"b3de30", "f76346", "ba9943", "c5b010", "e463d6", "598613"}
+hex_city["88168f"] = false
+hex_town["88168f"] = false
+hex_westwall["88168f"] = false
+hex_vp["88168f"] = 0
+hex_hv["88168f"] = 2
+hex_allied_position["88168f"] = true
+hex_units["88168f"] = {}
+hex_control["88168f"] = {}
+hex_primary_forward["88168f"] = "f76346"
+hex_secondary_forward["88168f"] = nil
+hex_withdraw["88168f"] = "598613"
+
+-- 1209
+hex_terrain["f76346"] = "clear"
+hex_edges["f76346"] = {"broken", "road", "broken", "clear", "road", "broken"}
+hex_neighbours["f76346"] = {nil, nil, nil, nil, "88168f", "b3de30"}
+hex_city["f76346"] = false
+hex_town["f76346"] = false
+hex_westwall["f76346"] = false
+hex_vp["f76346"] = 0
+hex_hv["f76346"] = 0
+hex_allied_position["f76346"] = false
+hex_units["f76346"] = {}
+hex_control["f76346"] = {}
+hex_primary_forward["f76346"] = nil
+hex_secondary_forward["f76346"] = nil
+hex_withdraw["f76346"] = "88168f"
+
+-- 1315
+hex_terrain["b4b0f5"] = "woods"
+hex_edges["b4b0f5"] = {"woods", "forest", "woods", "river", "river", "broken"}
+hex_neighbours["b4b0f5"] = {"a78fc0", "290b1d", "70b0bd", nil, nil, "57bb0d"}
+hex_city["b4b0f5"] = false
+hex_town["b4b0f5"] = false
+hex_westwall["b4b0f5"] = false
+hex_vp["b4b0f5"] = 0
+hex_hv["b4b0f5"] = 1
+hex_allied_position["b4b0f5"] = false
+hex_units["b4b0f5"] = {}
+hex_control["b4b0f5"] = {}
+hex_primary_forward["b4b0f5"] = "a78fc0"
+hex_secondary_forward["b4b0f5"] = "290b1d"
+hex_withdraw["b4b0f5"] = "57bb0d"
+
+-- 1314
+hex_terrain["290b1d"] = "forest"
+hex_edges["290b1d"] = {"broken", "broken", "woods", "woods", "woods", "woods"}
+hex_neighbours["290b1d"] = {"b970ef", "b6d331", "b6cd88", "70b0bd", "b4b0f5", "a78fc0"}
+hex_city["290b1d"] = false
+hex_town["290b1d"] = false
+hex_westwall["290b1d"] = false
+hex_vp["290b1d"] = 0
+hex_hv["290b1d"] = 2
+hex_allied_position["290b1d"] = true
+hex_units["290b1d"] = {}
+hex_control["290b1d"] = {}
+hex_primary_forward["290b1d"] = "b6d331"
+hex_secondary_forward["290b1d"] = "b6cd88"
+hex_withdraw["290b1d"] = "b4b0f5"
+
+-- 1313
+hex_terrain["b6d331"] = "broken"
+hex_edges["b6d331"] = {"broken", "road", "road", "woods", "forest", "road"}
+hex_neighbours["b6d331"] = {"bfbd8c", "d92e91", "9b8f6a", "b6cd88", "290b1d", "b970ef"}
+hex_city["b6d331"] = false
+hex_town["b6d331"] = false
+hex_westwall["b6d331"] = false
+hex_vp["b6d331"] = 0
+hex_hv["b6d331"] = 0
+hex_allied_position["b6d331"] = false
+hex_units["b6d331"] = {}
+hex_control["b6d331"] = {}
+hex_primary_forward["b6d331"] = "d92e91"
+hex_secondary_forward["b6d331"] = "9b8f6a"
+hex_withdraw["b6d331"] = "b970ef"
+
+-- 1312
+hex_terrain["d92e91"] = "forest"
+hex_edges["d92e91"] = {"road", "road", "woods", "woods", "road", "broken"}
+hex_neighbours["d92e91"] = {"e463d6", "c5b010", "99c3ee", "9b8f6a", "b6d331", "bfbd8c"}
+hex_city["d92e91"] = false
+hex_town["d92e91"] = false
+hex_westwall["d92e91"] = false
+hex_vp["d92e91"] = 0
+hex_hv["d92e91"] = 2
+hex_allied_position["d92e91"] = true
+hex_units["d92e91"] = {}
+hex_control["d92e91"] = {}
+hex_primary_forward["d92e91"] = "c5b010"
+hex_secondary_forward["d92e91"] = "e463d6"
+hex_withdraw["d92e91"] = "9b8f6a"
+
+-- 1311
+hex_terrain["c5b010"] = "broken"
+hex_edges["c5b010"] = {"road", "clear", "broken", "woods", "road", "broken"}
+hex_neighbours["c5b010"] = {"88168f", "ba9943", "28c52d", "99c3ee", "d92e91", "e463d6"}
+hex_city["c5b010"] = false
+hex_town["c5b010"] = false
+hex_westwall["c5b010"] = false
+hex_vp["c5b010"] = 0
+hex_hv["c5b010"] = 0
+hex_allied_position["c5b010"] = false
+hex_units["c5b010"] = {}
+hex_control["c5b010"] = {}
+hex_primary_forward["c5b010"] = "88168f"
+hex_secondary_forward["c5b010"] = nil
+hex_withdraw["c5b010"] = nil
+
+-- 1411
+hex_terrain["99c3ee"] = "woods"
+hex_edges["99c3ee"] = {"broken", "river", "river", "river", "woods", "forest"}
+hex_neighbours["99c3ee"] = {"c5b010", "28c52d", "4f0255", "6ff64e", "9b8f6a", "d92e91"}
+hex_city["99c3ee"] = false
+hex_town["99c3ee"] = false
+hex_westwall["99c3ee"] = false
+hex_vp["99c3ee"] = 0
+hex_hv["99c3ee"] = 3
+hex_allied_position["99c3ee"] = true
+hex_units["99c3ee"] = {}
+hex_control["99c3ee"] = {}
+hex_primary_forward["99c3ee"] = "c5b010"
+hex_secondary_forward["99c3ee"] = "28c52d"
+hex_withdraw["99c3ee"] = "9b8f6a"
+
+-- 1412
+hex_terrain["9b8f6a"] = "woods"
+hex_edges["9b8f6a"] = {"forest", "woods", "river", "bridge", "woods", "road"}
+hex_neighbours["9b8f6a"] = {"d92e91", "99c3ee", "6ff64e", "792ecf", "b6cd88", "b6d331"}
+hex_city["9b8f6a"] = false
+hex_town["9b8f6a"] = true
+hex_westwall["9b8f6a"] = false
+hex_vp["9b8f6a"] = 0
+hex_hv["9b8f6a"] = 4
+hex_allied_position["9b8f6a"] = true
+hex_units["9b8f6a"] = {}
+hex_control["9b8f6a"] = {}
+hex_primary_forward["9b8f6a"] = "b6d331"
+hex_secondary_forward["9b8f6a"] = "99c3ee"
+hex_withdraw["9b8f6a"] = "792ecf"
+
+-- 1413
+hex_terrain["b6cd88"] = "woods"
+hex_edges["b6cd88"] = {"broken", "woods", "river", "river", "woods", "forest"}
+hex_neighbours["b6cd88"] = {"b6d331", "9b8f6a", "792ecf", "6aafc5", "70b0bd", "290b1d"}
+hex_city["b6cd88"] = false
+hex_town["b6cd88"] = false
+hex_westwall["b6cd88"] = false
+hex_vp["b6cd88"] = 0
+hex_hv["b6cd88"] = 1
+hex_allied_position["b6cd88"] = false
+hex_units["b6cd88"] = {}
+hex_control["b6cd88"] = {}
+hex_primary_forward["b6cd88"] = "9b8f6a"
+hex_secondary_forward["b6cd88"] = "b6d331"
+hex_withdraw["b6cd88"] = "70b0bd"
+
+-- 1414
+hex_terrain["70b0bd"] = "woods"
+hex_edges["70b0bd"] = {"forest", "woods", "river", "river", "river", "woods"}
+hex_neighbours["70b0bd"] = {"290b1d", "b6cd88", "6aafc5", nil, nil, "b4b0f5"}
+hex_city["70b0bd"] = false
+hex_town["70b0bd"] = false
+hex_westwall["70b0bd"] = false
+hex_vp["70b0bd"] = 0
+hex_hv["70b0bd"] = 1
+hex_allied_position["70b0bd"] = false
+hex_units["70b0bd"] = {}
+hex_control["70b0bd"] = {}
+hex_primary_forward["70b0bd"] = "b6cd88"
+hex_secondary_forward["70b0bd"] = "290b1d"
+hex_withdraw["70b0bd"] = "b4b0f5"
+
+-- 1514
+hex_terrain["6aafc5"] = "woods"
+hex_edges["6aafc5"] = {"river", "road", "broken", "road", "river", "river"}
+hex_neighbours["6aafc5"] = {"b6cd88", "792ecf", nil, nil, nil, "70b0bd"}
+hex_city["6aafc5"] = false
+hex_town["6aafc5"] = false
+hex_westwall["6aafc5"] = false
+hex_vp["6aafc5"] = 0
+hex_hv["6aafc5"] = 1
+hex_allied_position["6aafc5"] = false
+hex_units["6aafc5"] = {}
+hex_control["6aafc5"] = {}
+hex_primary_forward["6aafc5"] = "792ecf"
+hex_secondary_forward["6aafc5"] = nil
+hex_withdraw["6aafc5"] = nil
+
+table.insert(hexagons, #hexagons+1, hex_terrain)
+table.insert(hexagons, #hexagons+1, hex_edges)
+table.insert(hexagons, #hexagons+1, hex_neighbours)
+
+
+return hexagons

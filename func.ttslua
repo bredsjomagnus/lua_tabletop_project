@@ -19,11 +19,17 @@ function tableHasKey(table,key)
 end
 
 function get_cost(terrain, edge, mp_type)
-  if edge == "road" then
+  print("terrain: ", terrain)
+  print("edge: ", edge)
+  if terrain == nil then
+    return 100
+  end
+  if edge == "road" or edge == "bridge" then
     return 1
   end
+
   if mp_type == "inf" then
-    if terrain == "clear" or terrain == "broken" or terrain == "woods" or terrain == "road" or terrain == "city" then
+    if terrain == "clear" or terrain == "broken" or terrain == "woods" or terrain == "city" then
       return 1
     end
 
@@ -33,7 +39,7 @@ function get_cost(terrain, edge, mp_type)
   end
 
   if mp_type == "mech" then
-    if terrain == "clear" or terrain == "road" or terrain == "city" then
+    if terrain == "clear" or terrain == "city" then
       return 1
     end
 
@@ -97,7 +103,7 @@ end
 
 function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_tint)
 
-  -- local mp = 3
+  -- local mp = 2
   -- local mp_type = "inf"
   -- local unit_army = "allied"
   local dutt_color = {}
@@ -123,7 +129,7 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
     local currentHex = frontier.min() -- hämtar den hexagon med minst kostnad
     frontier.remove(currentHex)
     --print(hex_neighbours[currentHex]) -- table med currentHex grannars hex_GUIDs
-    for i, next in ipairs(hex_neighbours[currentHex]) do
+    for i, next in pairs(hex_neighbours[currentHex]) do
       if next then
         local edge = hex_edges[currentHex][i]
         local next_cost = get_cost(hex_terrain[next], edge, mp_type)
@@ -132,6 +138,8 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
 
         local actual_mp = mp
 
+        print("cost_so_far[currentHex]: ", cost_so_far[currentHex])
+        print("next_cost: ", next_cost)
         local new_cost = cost_so_far[currentHex] + next_cost
 
         if not tableHasKey(cost_so_far, next) or new_cost < cost_so_far[next] then

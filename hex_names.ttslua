@@ -1,0 +1,140 @@
+hex_name = {}
+
+-- rad 07
+hex_name["0701"] = "914a02"
+hex_name["0702"] = "2fb219"
+hex_name["0703"] = "8d5a83"
+hex_name["0704"] = "cf3fab"
+hex_name["0705"] = "023530"
+hex_name["0706"] = "c294d0"
+hex_name["0707"] = "302da7"
+hex_name["0708"] = "eb4748"
+hex_name["0709"] = "ccb98d"
+hex_name["0710"] = "f04b37"
+hex_name["0711"] = "82a41c"
+hex_name["0712"] = "ac1ab4"
+hex_name["0713"] = "6e8470"
+hex_name["0714"] = "21cef4"
+hex_name["0715"] = "bd4269"
+
+-- rad 08
+hex_name["0801"] = "d955a8"
+hex_name["0802"] = "1a046f"
+hex_name["0803"] = "837f52"
+hex_name["0804"] = "94963c"
+hex_name["0805"] = "f5c5b3"
+hex_name["0806"] = "10df5b"
+hex_name["0807"] = "351b38"
+hex_name["0808"] = "4df639"
+hex_name["0809"] = "c1e5c3"
+hex_name["0810"] = "c87b6d"
+hex_name["0811"] = "bfec17"
+hex_name["0812"] = "fb2ee6"
+hex_name["0813"] = "393c5c"
+
+-- rad 09
+hex_name["0902"] = "68090b"
+hex_name["0903"] = "ea7971"
+hex_name["0904"] = "73ecd5"
+hex_name["0905"] = "59c980"
+hex_name["0906"] = "80dbf2"
+hex_name["0907"] = "c53c2b"
+hex_name["0908"] = "989b2f"
+hex_name["0909"] = "beccde"
+hex_name["0910"] = "585730"
+hex_name["0911"] = "f37470"
+hex_name["0912"] = "e2c7d6"
+hex_name["0913"] = "d12a45"
+hex_name["0914"] = "4b524c"
+
+-- rad 10
+hex_name["1001"] = "a923d5"
+hex_name["1002"] = "188a51"
+hex_name["1003"] = "49dacf"
+hex_name["1004"] = "73d24a"
+hex_name["1005"] = "8c6c82"
+hex_name["1006"] = "4e587c"
+hex_name["1007"] = "b78ed7"
+hex_name["1008"] = "6b5676"
+hex_name["1009"] = "5839d5"
+hex_name["1010"] = "02bd93"
+hex_name["1011"] = "9dc118"
+hex_name["1012"] = "6cfeeb"
+hex_name["1013"] = "b0f0fc"
+hex_name["1014"] = "c6a041"
+
+-- rad 11
+hex_name["1102"] = "c94edd"
+hex_name["1103"] = "5ae124"
+hex_name["1104"] = "47037a"
+hex_name["1105"] = "08db6f"
+hex_name["1106"] = "d5dc6d"
+hex_name["1107"] = "602f61"
+hex_name["1108"] = "b00ce0"
+hex_name["1109"] = "77da8a"
+hex_name["1110"] = "b3de30"
+hex_name["1111"] = "598613"
+hex_name["1112"] = "195d56"
+hex_name["1113"] = "d93c33"
+hex_name["1114"] = "14139c"
+hex_name["1115"] = "aa20e6"
+
+-- rad 12
+hex_name["1201"] = "fe64a7"
+hex_name["1202"] = "07d450"
+hex_name["1203"] = "c99774"
+hex_name["1204"] = "d0a0a9"
+hex_name["1205"] = "9cdeb2"
+hex_name["1206"] = "7bcd30"
+hex_name["1207"] = "596ec9"
+hex_name["1208"] = "578925"
+hex_name["1209"] = "f76346"
+hex_name["1210"] = "88168f"
+hex_name["1211"] = "e463d6"
+hex_name["1212"] = "bfbd8c"
+hex_name["1213"] = "b970ef"
+hex_name["1214"] = "a78fc0"
+hex_name["1215"] = "57bb0d"
+
+-- rad 13
+hex_name["1302"] = "329224"
+hex_name["1303"] = "9be827"
+hex_name["1304"] = "9a0916"
+hex_name["1305"] = "4901fd"
+hex_name["1306"] = "2d0500"
+hex_name["1307"] = "99820f"
+hex_name["1308"] = "6ca9c9"
+hex_name["1309"] = "c33cca"
+hex_name["1310"] = "ba9943"
+hex_name["1311"] = "c5b010"
+hex_name["1312"] = "d92e91"
+hex_name["1313"] = "b6d331"
+hex_name["1314"] = "290b1d"
+hex_name["1315"] = "b4b0f5"
+
+-- rad 14
+hex_name["1401"] = "559e8a"
+hex_name["1402"] = "831357"
+hex_name["1403"] = "ec01a2"
+hex_name["1404"] = "f6c57d"
+hex_name["1405"] = "8d2a00"
+hex_name["1406"] = "23076c"
+hex_name["1407"] = "af2a2e"
+hex_name["1408"] = "22d9d3"
+hex_name["1409"] = "01d8a4"
+hex_name["1410"] = "28c52d"
+hex_name["1411"] = "99c3ee"
+hex_name["1412"] = "9b8f6a"
+hex_name["1413"] = "b6cd88"
+hex_name["1414"] = "70b0bd"
+
+-- rad 15
+hex_name["1514"] = "6aafc5"
+
+
+
+
+
+
+
+return hex_name

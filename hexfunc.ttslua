@@ -1,0 +1,45 @@
+local hexfunc = {}
+
+function getDirectionalHex(row, column)
+  local r = tostring(row)
+  local c = tostring(column)
+  if #r < 2 then
+    r = "0"..r
+  end
+  if #c < 2 then
+    c = "0"..c
+  end
+  local res = r..c
+  return res
+end
+
+function hexfunc.getNeighbours(hexname)
+  local direction = {}
+  local row = tonumber(string.sub(hexname, 1, 2))
+  local column = tonumber(string.sub(hexname, 3, 4))
+
+  if row % 2 == 0 then
+    -- om jämn rad
+    -- directions
+    direction["1"] = getDirectionalHex(row-1, column)
+    direction["2"] = getDirectionalHex(row, column-1)
+    direction["3"] = getDirectionalHex(row+1, column)
+    direction["4"] = getDirectionalHex(row+1, column+1)
+    direction["5"] = getDirectionalHex(row, column+1)
+    direction["6"] = getDirectionalHex(row-1, column+1)
+  else
+    -- om udda rad
+  -- directions
+    direction["1"] = getDirectionalHex(row-1, column-1)
+    direction["2"] = getDirectionalHex(row, column-1)
+    direction["3"] = getDirectionalHex(row+1, column-1)
+    direction["4"] = getDirectionalHex(row+1, column)
+    direction["5"] = getDirectionalHex(row, column+1)
+    direction["6"] = getDirectionalHex(row-1, column)
+  end
+
+  return direction
+
+end
+
+return hexfunc
