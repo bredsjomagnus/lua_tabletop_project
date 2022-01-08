@@ -14,8 +14,8 @@ hex_name["0710"] = "f04b37"
 hex_name["0711"] = "82a41c"
 hex_name["0712"] = "ac1ab4"
 hex_name["0713"] = "6e8470"
-hex_name["0714"] = "21cef4"
-hex_name["0715"] = "bd4269"
+hex_name["0714"] = "c4108c"
+hex_name["0715"] = "724004"
 
 -- rad 08
 hex_name["0801"] = "d955a8"
@@ -31,6 +31,8 @@ hex_name["0810"] = "c87b6d"
 hex_name["0811"] = "bfec17"
 hex_name["0812"] = "fb2ee6"
 hex_name["0813"] = "393c5c"
+hex_name["0814"] = "78f9dc"
+hex_name["0815"] = "d7dc89"
 
 -- rad 09
 hex_name["0902"] = "68090b"
@@ -46,6 +48,7 @@ hex_name["0911"] = "f37470"
 hex_name["0912"] = "e2c7d6"
 hex_name["0913"] = "d12a45"
 hex_name["0914"] = "4b524c"
+hex_name["0915"] = "e2dedf"
 
 -- rad 10
 hex_name["1001"] = "a923d5"
@@ -62,6 +65,7 @@ hex_name["1011"] = "9dc118"
 hex_name["1012"] = "6cfeeb"
 hex_name["1013"] = "b0f0fc"
 hex_name["1014"] = "c6a041"
+hex_name["1015"] = "a94be9"
 
 -- rad 11
 hex_name["1102"] = "c94edd"
