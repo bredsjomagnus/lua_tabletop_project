@@ -14,10 +14,12 @@ function func.countvalues(t)
 end
 
 function func.updateHexControl(hex_units, hex_neighbours, hex_control)
+
   for hex_guid, units in pairs(hex_units) do
     if func.countvalues(units) > 0 then
       local hex_n = hex_neighbours[hex_guid]
       local unit = units[1]
+      print(unit.getName())
       for i, n_hex_guid in pairs(hex_n) do
         local control = "A"
         if string.find(unit.getName(), "German") then
@@ -42,14 +44,16 @@ function func.updateHexUnits(hex_units)
         local zones = v.getZones()
         if func.countvalues(zones) > 0 then
           zone = zones[1]
-          table.insert(hex_units[zone.guid], #hex_units[zone.guid] + 1, v)
-
+          table.insert(hex_units[zone.guid], v)
+          -- table.insert(hex_units[zone.guid], #hex_units[zone.guid] + 1, v)
         end
 
       end
     end
   end
 
+  -- print("hex_units[c87b6d]")
+  -- print(hex_units["c87b6d"])
   return hex_units
 end
 
@@ -62,74 +66,44 @@ function tableHasKey(table,key)
 end
 
 function get_cost(terrain, edge, mp_type, actual_mp)
-  -- print("terrain: ", terrain)
-  -- print("edge: ", edge)
-
-  local is_river = false
-  if edge == "river" then
-    is_river = true
-  end
-
-  if edge == "borderedge" then
-    return 100
-  end
 
   if terrain == nil then
     return 100
   end
+
+  -- if next_zoc then
+  --   return actual_mp
+  -- end
+
   if edge == "road" or edge == "bridge" then
     return 1
   end
 
   if mp_type == "inf" then
     if terrain == "clear" or terrain == "broken" or terrain == "woods" or terrain == "city" then
-      if is_river and actual_mp >= 1 then
-        return actual_mp
-      else
         return 1
-      end
     end
 
     if terrain == "forest" then
-      if is_river and actual_mp >= 1 then
-        return actual_mp
-      else
         return 2
-      end
     end
   end
 
   if mp_type == "mech" then
     if terrain == "clear" or terrain == "city" then
-      if is_river and actual_mp >= 1 then
-        return actual_mp
-      else
         return 1
-      end
     end
 
     if terrain == "broken" then
-      if is_river and actual_mp >= 1 then
-        return actual_mp
-      else
         return 2
-      end
     end
 
     if terrain == "woods" then
-      if is_river and actual_mp >= 1 then
-        return actual_mp
-      else
         return 3
-      end
     end
 
     if terrain == "forest" then
-      if is_river and actual_mp >= 1 then
-        return actual_mp
-      else
         return 4
-      end
     end
   end
 
@@ -178,7 +152,49 @@ function func.split(inputstr, sep)
     return t
 end
 
+function contains(haystack, needle)
+  for _, v in pairs(haystack) do
+    if v == needle then
+      return true
+    end
+  end
+  return false
+end
+
+
+function isZOC(hex_control, hex, army)
+    -- print("hexcontrol")
+    -- print(hex_control["beccde"])
+    if func.countvalues(hex_control[hex]) > 0 then
+      if army == "allied" then
+        return contains(hex_control[hex], "G")
+      elseif army == "germany" then
+        return contains(hex_control[hex], "A")
+      end
+    end
+end
+
+function hasEnemies(hex_units, hex, army)
+
+  -- print(hex_units["c87b6d"])
+  -- print("hex: "..hex)
+  -- print("hex_units: "..hex_units[hex])
+  if func.countvalues(hex_units[hex]) > 0 then
+    for k, v in pairs(hex_units[hex]) do
+      if army == "allied" and string.find(v.getName(), "German") then
+        return true
+      elseif army == "germany" and string.find(v.getName(), "Allied") then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+
+
 function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_tint, hex_units, hex_control)
+
 
   -- local mp = 2
   -- local mp_type = "inf"
@@ -210,16 +226,54 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
       if next then
         local actual_mp = mp
 
+        local currentHex_zoc = isZOC(hex_control, currentHex, unit_army)
+        local next_zoc = isZOC(hex_control, next, unit_army)
+        local enemies = hasEnemies(hex_units, next, unit_army)
+        -- local enemies = false
         local edge = hex_edges[currentHex][i]
-        local next_cost = get_cost(hex_terrain[next], edge, mp_type, actual_mp)
-        -- print(next_cost)
-        --print(mp_type .." " .. hex_edges[currentHex][i] .." -> ".. hex_terrain[next] .. " kostar ".. next_cost)
+        local next_cost = get_cost(hex_terrain[next], edge, mp_type, actual_mp, currentHex_zoc, next_zoc, enemies)
 
 
 
-        print("cost_so_far[currentHex]: ", cost_so_far[currentHex])
-        print("next_cost: ", next_cost)
         local new_cost = cost_so_far[currentHex] + next_cost
+
+        if next_zoc and new_cost < actual_mp then
+          -- print("actual_mp: ", actual_mp)
+          new_cost = actual_mp
+        end
+
+        if edge == "river" and new_cost < actual_mp then
+          -- print("actual_mp: ", actual_mp)
+          new_cost = actual_mp
+        end
+
+
+
+        if currentHex_zoc and not next_zoc then
+          print(currentHex.." -> "..next)
+          new_cost = new_cost + 1
+        end
+
+        if currentHex_zoc and next_zoc then
+          -- print(currentHex.." -> "..next)
+          new_cost = 100
+        end
+
+        if edge == "borderedge" then
+          new_cost = 100
+        end
+
+        if enemies then
+          new_cost = 100
+        end
+
+        if currentHex_zoc and next_zoc then
+          new_cost = 100
+        end
+
+        -- if new_cost == 100 then
+        --   print(currentHex.." -> "..next.. " cost: "..tostring(new_cost))
+        -- end
 
         if not tableHasKey(cost_so_far, next) or new_cost < cost_so_far[next] then
           -- print("new_cost: ".. new_cost)
@@ -228,21 +282,26 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
           -- print(tableHasKey(cost_so_far, next))
 
           if new_cost <= actual_mp then
-            print("new_cost: "..new_cost)
-            print("actual_mp: "..actual_mp)
+            -- print("new_cost: "..new_cost)
+            -- print("actual_mp: "..actual_mp)
             cost_so_far[next] = new_cost
             table.insert(cost_so_far, {next = new_cost})
             local priority = new_cost
             frontier[next] = priority
-            print(#cost_so_far)
+            -- print(#cost_so_far)
             local zone = getObjectFromGUID(next)
             zone_pos = zone.getPosition()
             -- zone_pos.x = zone_pos.x - color_tint*0.98
             local dutt = spawnObject({type="BlockSquare", position=zone_pos, sound=false})
             dutt.setScale({0.2,0.2,0.2})
             dutt.setName("proxilidutt for "..unit_name.." "..new_cost)
-            dutt.setColorTint(dutt_color)
+            if next_zoc then
+              dutt.setColorTint({0, 0, 0, 1})
+            else
+              dutt.setColorTint(dutt_color)
+            end
 
+            -- print(next)
           end
 
           -- print("cost_so_far["..next.."]: ".. cost_so_far[next])
@@ -260,7 +319,7 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
     end
   end
 
-  print("COST_SO_FAR: "..#cost_so_far)
+  -- print("COST_SO_FAR: "..#cost_so_far)
   -- for _, hex in ipairs(cost_so_far) do
   --   print(hex[0])
   -- end
