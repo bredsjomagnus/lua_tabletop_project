@@ -1,6 +1,69 @@
 hex_name = {}
 
 
+-- rad 01
+hex_name["0108"] = "99de66"
+hex_name["0109"] = "c129d4"
+hex_name["0110"] = "475c24"
+hex_name["0111"] = "ae6621"
+hex_name["0112"] = "541dca"
+hex_name["0113"] = "f4e76b"
+hex_name["0114"] = "a41f61"
+hex_name["0115"] = "1dc8d5"
+hex_name["0116"] = "15f30e"
+
+-- rad 02
+hex_name["0201"] = "1aef3b"
+hex_name["0202"] = "01d13a"
+hex_name["0203"] = "72d614"
+hex_name["0204"] = "619c8d"
+hex_name["0205"] = "e540f7"
+hex_name["0206"] = "1c9d2e"
+hex_name["0207"] = "56b7c8"
+hex_name["0208"] = "4a9670"
+hex_name["0209"] = "50a7e7"
+hex_name["0210"] = "f8bcb4"
+hex_name["0211"] = "df3459"
+hex_name["0212"] = "e3700e"
+hex_name["0213"] = "3cb78e"
+hex_name["0214"] = "366d20"
+hex_name["0215"] = "0f21c8"
+
+-- rad 03
+hex_name["0301"] = "a01e3c"
+hex_name["0302"] = "b02409"
+hex_name["0303"] = "57dab2"
+hex_name["0304"] = "49725a"
+hex_name["0305"] = "385c7f"
+hex_name["0306"] = "29b511"
+hex_name["0307"] = "01e05c"
+hex_name["0308"] = "18b4c3"
+hex_name["0309"] = "c770d9"
+hex_name["0310"] = "16d83a"
+hex_name["0311"] = "ad2bdb"
+hex_name["0312"] = "0c0a2a"
+hex_name["0313"] = "4b134b"
+hex_name["0314"] = "d6b2a0"
+hex_name["0315"] = "5ca6e7"
+
+
+-- rad 04
+hex_name["0401"] = "fa471d"
+hex_name["0402"] = "367f23"
+hex_name["0403"] = "7b92d4"
+hex_name["0404"] = "d44ba3"
+hex_name["0405"] = "ec7169"
+hex_name["0406"] = "8210a4"
+hex_name["0407"] = "88e8d3"
+hex_name["0408"] = "97e3ac"
+hex_name["0409"] = "199f52"
+hex_name["0410"] = "4bbb90"
+hex_name["0411"] = "f7e4dd"
+hex_name["0412"] = "eab2fa"
+hex_name["0413"] = "779830"
+hex_name["0414"] = "22b52a"
+hex_name["0415"] = "4b92a7"
+
 -- rad 05
 hex_name["0501"] = "bfcd58"
 hex_name["0502"] = "93d304"

@@ -1,32 +1,81 @@
 local func = {}
 
 
-function func.countvalues(t)
+function countvalues(t)
 
-  local count = 0
-  for k, v in pairs(t) do
-    if v != nil then
-      count = count + 1
+  if type(t) == "table" then
+    local count = 0
+    for k, v in pairs(t) do
+      if v != nil then
+        count = count + 1
+      end
     end
   end
 
+
+
+
   return count
+
+
 end
 
-function func.updateHexControl(hex_units, hex_neighbours, hex_control)
+function func.updateHexControl(hex_units, hex_neighbours, hex_control, hex_town)
 
+  -- en behållare för en funnen enhet
+  local u = nil
+
+  -- för varje hexagon på kartan kolla efter enheter
   for hex_guid, units in pairs(hex_units) do
-    if func.countvalues(units) > 0 then
-      local hex_n = hex_neighbours[hex_guid]
-      local unit = units[1]
-      print(unit.getName())
-      for i, n_hex_guid in pairs(hex_n) do
-        local control = "A"
-        if string.find(unit.getName(), "German") then
-          control = "G"
+
+    -- om finns det enheter på en hexagon
+    if #units > 0 then
+
+
+
+      -- utgångsläget är att en hexagon inte har zoc
+      local zoc = false
+
+      -- för var och en av enheterna på hexagonen
+      for _, unit in pairs(units) do
+
+        -- en behållare för enheten
+        u = unit
+
+        -- enhetens beskrivningstext
+        local unit_desc = unit.getDescription()
+        unit_desc = func.split(unit_desc, ":")
+
+        -- kolla om enheten har zoc beroende på om
+        -- enheten har [x] str på den sida som visas.
+        if unit.is_face_down then
+          zoc = unit_desc["zoc_2"]
+        else
+          zoc = unit_desc["zoc_1"]
         end
-        table.insert(hex_control[n_hex_guid], control)
+
+        -- kolla om en enhet som har [x] str uppåt
+        -- är placerad in en stad, då det avgör zoc.
+        if zoc == "false" and hex_town[hex_guid] then
+          zoc = "true"
+        end
       end
+
+      if zoc == "true" then
+
+        -- ta fram hexagonens grannar
+        local hex_n = hex_neighbours[hex_guid]
+
+        for i, n_hex_guid in pairs(hex_n) do
+          local control = "A"
+          if string.find(u.getName(), "German") then
+            control = "G"
+          end
+          table.insert(hex_control[n_hex_guid], control)
+        end
+
+      end
+
     end
 
   end
@@ -38,11 +87,11 @@ function func.updateHexUnits(hex_units)
 
   local allObjects = getAllObjects()
   local zone = nil
-  if func.countvalues(allObjects) > 0 then
+  if #allObjects > 0 then
     for k, v in pairs(allObjects) do
       if string.find(v.getName(), "unit") then
         local zones = v.getZones()
-        if func.countvalues(zones) > 0 then
+        if #zones > 0 then
           zone = zones[1]
           table.insert(hex_units[zone.guid], v)
           -- table.insert(hex_units[zone.guid], #hex_units[zone.guid] + 1, v)
@@ -165,13 +214,20 @@ end
 function isZOC(hex_control, hex, army)
     -- print("hexcontrol")
     -- print(hex_control["beccde"])
-    if func.countvalues(hex_control[hex]) > 0 then
-      if army == "allied" then
-        return contains(hex_control[hex], "G")
-      elseif army == "germany" then
-        return contains(hex_control[hex], "A")
+    if tableHasKey(hex_control, hex) then
+
+      if #hex_control[hex] > 0 then
+        if army == "allied" then
+          return contains(hex_control[hex], "G")
+        elseif army == "germany" then
+          return contains(hex_control[hex], "A")
+        end
       end
+
+
+
     end
+
 end
 
 function hasEnemies(hex_units, hex, army)
@@ -179,15 +235,20 @@ function hasEnemies(hex_units, hex, army)
   -- print(hex_units["c87b6d"])
   -- print("hex: "..hex)
   -- print("hex_units: "..hex_units[hex])
-  if func.countvalues(hex_units[hex]) > 0 then
-    for k, v in pairs(hex_units[hex]) do
-      if army == "allied" and string.find(v.getName(), "German") then
-        return true
-      elseif army == "germany" and string.find(v.getName(), "Allied") then
-        return true
+  if tableHasKey(hex_control, hex) then
+
+      if #hex_units[hex] > 0 then
+        for k, v in pairs(hex_units[hex]) do
+          if army == "allied" and string.find(v.getName(), "German") then
+            return true
+          elseif army == "germany" and string.find(v.getName(), "Allied") then
+            return true
+          end
+        end
       end
+
     end
-  end
+
   return false
 end
 
@@ -326,4 +387,10 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
 
 end
 
+
+function func.resetHexagons(hexagons)
+  for k, v in pairs(hexagons) do
+    hexagons[k] = {}
+  end
+end
 return func
