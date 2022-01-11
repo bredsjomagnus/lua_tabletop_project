@@ -254,7 +254,7 @@ end
 
 
 
-function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_tint, hex_units, hex_control)
+function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_tint, hex_units, hex_control, hex_allied_position, onlypositions)
 
 
   -- local mp = 2
@@ -262,7 +262,7 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
   -- local unit_army = "allied"
   local dutt_color = {}
   if unit_army == "allied" then
-    dutt_color = {(255 - (color_tint-1)*50)/255, (0 + (color_tint-1)*20)/255, (242 - (color_tint-1)*5)/255, 1}
+    dutt_color = {(20 + (color_tint-1)*80)/255, (80+ (color_tint-1)*80)/255, (240 - (color_tint-1)*50)/255, 1}
   else
     dutt_color = {(240 - (color_tint-1)*40)/255, 67/255, (14 + (color_tint-1)*20)/255, 1}
   end
@@ -352,15 +352,30 @@ function func.dijkstra_search(start, mp, mp_type, unit_army, unit_name, color_ti
             -- print(#cost_so_far)
             local zone = getObjectFromGUID(next)
             zone_pos = zone.getPosition()
+            zone_pos.y = zone_pos.y + 5
             -- zone_pos.x = zone_pos.x - color_tint*0.98
-            local dutt = spawnObject({type="BlockSquare", position=zone_pos, sound=false})
-            dutt.setScale({0.2,0.2,0.2})
-            dutt.setName("proxilidutt for "..unit_name.." "..new_cost)
-            if next_zoc then
-              dutt.setColorTint({0, 0, 0, 1})
+
+            if onlypositions then
+              if hex_allied_position[next] then
+                local dutt = spawnObject({type="BlockSquare", position=zone_pos, sound=false})
+                dutt.setScale({0.2,0.2,0.2})
+                dutt.setName("proxilidutt for "..unit_name.." "..new_cost)
+                dutt.setColorTint(dutt_color)
+                dutt.setPositionSmooth(zone_pos, false, false)
+              end
             else
+
+              local dutt = spawnObject({type="BlockSquare", position=zone_pos, sound=false})
+              dutt.setScale({0.2,0.2,0.2})
+              dutt.setName("proxilidutt for "..unit_name.." "..new_cost)
               dutt.setColorTint(dutt_color)
+              dutt.setPositionSmooth(zone_pos, false, false)
             end
+            -- if next_zoc then
+            --   dutt.setColorTint({0, 0, 0, 1})
+            -- else
+            --   dutt.setColorTint(dutt_color)
+            -- end
 
             -- print(next)
           end

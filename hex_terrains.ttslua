@@ -1,0 +1,983 @@
+hex_name = require("hex_names")
+hex_terrain = {}
+
+
+
+-- 0108
+local name = "0108"
+hex_terrain[hex_name[name]] = "forest"
+-- 0109
+local name = "0109"
+hex_terrain[hex_name[name]] = "broken"
+-- 0110
+local name = "0110"
+hex_terrain[hex_name[name]] = "clear"
+-- 0111
+local name = "0111"
+hex_terrain[hex_name[name]] = "broken"
+-- 0112
+local name = "0112"
+hex_terrain[hex_name[name]] = "clear"
+-- 0113
+local name = "0113"
+hex_terrain[hex_name[name]] = "woods"
+-- 0114
+local name = "0114"
+hex_terrain[hex_name[name]] = "woods"
+-- 0115
+local name = "0115"
+hex_terrain[hex_name[name]] = "woods"
+-- 0116
+local name = "0116"
+hex_terrain[hex_name[name]] = "city"
+-- 0117
+local name = "0117"
+hex_terrain[hex_name[name]] = "city"
+-- 0118
+local name = "0118"
+hex_terrain[hex_name[name]] = "clear"
+-- 0119
+local name = "0119"
+hex_terrain[hex_name[name]] = "clear"
+-- 0120
+local name = "0120"
+hex_terrain[hex_name[name]] = "clear"
+-- 0121
+local name = "0121"
+hex_terrain[hex_name[name]] = "woods"
+-- 0122
+local name = "0122"
+hex_terrain[hex_name[name]] = "clear"
+-- 0123
+local name = "0123"
+hex_terrain[hex_name[name]] = "clear"
+-- 0124
+local name = "0124"
+hex_terrain[hex_name[name]] = "broken"
+-- 0125
+local name = "0125"
+hex_terrain[hex_name[name]] = "broken"
+-- 0126
+local name = "0126"
+hex_terrain[hex_name[name]] = "clear"
+-- 0127
+local name = "0127"
+hex_terrain[hex_name[name]] = "clear"
+-- 0128
+local name = "0128"
+hex_terrain[hex_name[name]] = "clear"
+-- 0129
+local name = "0129"
+hex_terrain[hex_name[name]] = "clear"
+-- 0130
+local name = "0130"
+hex_terrain[hex_name[name]] = "clear"
+
+
+-- 0201
+local name = "0201"
+hex_terrain[hex_name[name]] = "forest"
+-- 0202
+local name = "0202"
+hex_terrain[hex_name[name]] = "forest"
+-- 0203
+local name = "0203"
+hex_terrain[hex_name[name]] = "forest"
+-- 0204
+local name = "0204"
+hex_terrain[hex_name[name]] = "woods"
+-- 0205
+local name = "0205"
+hex_terrain[hex_name[name]] = "broken"
+-- 0206
+local name = "0206"
+hex_terrain[hex_name[name]] = "woods"
+-- 0207
+local name = "0207"
+hex_terrain[hex_name[name]] = "forest"
+-- 0208
+local name = "0208"
+hex_terrain[hex_name[name]] = "forest"
+-- 0209
+local name = "0209"
+hex_terrain[hex_name[name]] = "forest"
+-- 0210
+local name = "0210"
+hex_terrain[hex_name[name]] = "forest"
+-- 0211
+local name = "0211"
+hex_terrain[hex_name[name]] = "woods"
+-- 0212
+local name = "0212"
+hex_terrain[hex_name[name]] = "city"
+-- 0213
+local name = "0213"
+hex_terrain[hex_name[name]] = "woods"
+-- 0214
+local name = "0214"
+hex_terrain[hex_name[name]] = "woods"
+-- 0215
+local name = "0215"
+hex_terrain[hex_name[name]] = "woods"
+-- 0216
+local name = "0216"
+hex_terrain[hex_name[name]] = "broken"
+-- 0217
+local name = "0217"
+hex_terrain[hex_name[name]] = "broken"
+-- 0218
+local name = "0218"
+hex_terrain[hex_name[name]] = "broken"
+-- 0219
+local name = "0219"
+hex_terrain[hex_name[name]] = "broken"
+-- 0220
+local name = "0220"
+hex_terrain[hex_name[name]] = "broken"
+-- 0221
+local name = "0221"
+hex_terrain[hex_name[name]] = "woods"
+-- 0222
+local name = "0222"
+hex_terrain[hex_name[name]] = "clear"
+-- 0223
+local name = "0223"
+hex_terrain[hex_name[name]] = "broken"
+-- 0224
+local name = "0224"
+hex_terrain[hex_name[name]] = "clear"
+-- 0225
+local name = "0225"
+hex_terrain[hex_name[name]] = "clear"
+-- 0226
+local name = "0226"
+hex_terrain[hex_name[name]] = "clear"
+-- 0227
+local name = "0227"
+hex_terrain[hex_name[name]] = "clear"
+-- 0228
+local name = "0228"
+hex_terrain[hex_name[name]] = "broken"
+-- 0229
+local name = "0229"
+hex_terrain[hex_name[name]] = "woods"
+
+
+
+
+-- 0301
+local name = "0301"
+hex_terrain[hex_name[name]] = "broken"
+-- 0302
+local name = "0302"
+hex_terrain[hex_name[name]] = "forest"
+-- 0303
+local name = "0303"
+hex_terrain[hex_name[name]] = "woods"
+-- 0304
+local name = "0304"
+hex_terrain[hex_name[name]] = "woods"
+-- 0305
+local name = "0305"
+hex_terrain[hex_name[name]] = "forest"
+-- 0306
+local name = "0306"
+hex_terrain[hex_name[name]] = "woods"
+-- 0307
+local name = "0307"
+hex_terrain[hex_name[name]] = "broken"
+-- 0308
+local name = "0308"
+hex_terrain[hex_name[name]] = "forest"
+-- 0309
+local name = "0309"
+hex_terrain[hex_name[name]] = "forest"
+-- 0310
+local name = "0310"
+hex_terrain[hex_name[name]] = "forest"
+-- 0311
+local name = "0311"
+hex_terrain[hex_name[name]] = "woods"
+-- 0312
+local name = "0312"
+hex_terrain[hex_name[name]] = "woods"
+-- 0313
+local name = "0313"
+hex_terrain[hex_name[name]] = "broken"
+-- 0314
+local name = "0314"
+hex_terrain[hex_name[name]] = "woods"
+-- 0315
+local name = "0315"
+hex_terrain[hex_name[name]] = "woods"
+-- 0316
+local name = "0316"
+hex_terrain[hex_name[name]] = "forest"
+-- 0317
+local name = "0317"
+hex_terrain[hex_name[name]] = "broken"
+-- 0318
+local name = "0318"
+hex_terrain[hex_name[name]] = "forest"
+-- 0319
+local name = "0319"
+hex_terrain[hex_name[name]] = "broken"
+-- 0320
+local name = "0320"
+hex_terrain[hex_name[name]] = "woods"
+-- 0321
+local name = "0321"
+hex_terrain[hex_name[name]] = "woods"
+-- 0322
+local name = "0322"
+hex_terrain[hex_name[name]] = "clear"
+-- 0323
+local name = "0323"
+hex_terrain[hex_name[name]] = "woods"
+-- 0324
+local name = "0324"
+hex_terrain[hex_name[name]] = "woods"
+-- 0325
+local name = "0325"
+hex_terrain[hex_name[name]] = "clear"
+-- 0326
+local name = "0326"
+hex_terrain[hex_name[name]] = "broken"
+-- 0327
+local name = "0327"
+hex_terrain[hex_name[name]] = "clear"
+-- 0328
+local name = "0328"
+hex_terrain[hex_name[name]] = "clear"
+-- 0329
+local name = "0329"
+hex_terrain[hex_name[name]] = "woods"
+-- 0330
+local name = "0330"
+hex_terrain[hex_name[name]] = "clear"
+
+
+-- 0401
+local name = "0401"
+hex_terrain[hex_name[name]] = "woods"
+-- 0402
+local name = "0402"
+hex_terrain[hex_name[name]] = "woods"
+-- 0403
+local name = "0403"
+hex_terrain[hex_name[name]] = "woods"
+-- 0404
+local name = "0404"
+hex_terrain[hex_name[name]] = "forest"
+-- 0405
+local name = "0405"
+hex_terrain[hex_name[name]] = "broken"
+-- 0406
+local name = "0406"
+hex_terrain[hex_name[name]] = "woods"
+-- 0407
+local name = "0407"
+hex_terrain[hex_name[name]] = "clear"
+-- 0408
+local name = "0408"
+hex_terrain[hex_name[name]] = "broken"
+-- 0409
+local name = "0409"
+hex_terrain[hex_name[name]] = "forest"
+-- 0410
+local name = "0410"
+hex_terrain[hex_name[name]] = "broken"
+-- 0411
+local name = "0411"
+hex_terrain[hex_name[name]] = "broken"
+-- 0412
+local name = "0412"
+hex_terrain[hex_name[name]] = "forest"
+-- 0413
+local name = "0413"
+hex_terrain[hex_name[name]] = "woods"
+-- 0414
+local name = "0414"
+hex_terrain[hex_name[name]] = "broken"
+-- 0415
+local name = "0415"
+hex_terrain[hex_name[name]] = "woods"
+-- 0416
+local name = "0416"
+hex_terrain[hex_name[name]] = "broken"
+-- 0417
+local name = "0417"
+hex_terrain[hex_name[name]] = "broken"
+-- 0418
+local name = "0418"
+hex_terrain[hex_name[name]] = "clear"
+-- 0419
+local name = "0419"
+hex_terrain[hex_name[name]] = "woods"
+-- 0420
+local name = "0420"
+hex_terrain[hex_name[name]] = "broken"
+-- 0421
+local name = "0421"
+hex_terrain[hex_name[name]] = "woods"
+-- 0422
+local name = "0422"
+hex_terrain[hex_name[name]] = "woods"
+-- 0423
+local name = "0423"
+hex_terrain[hex_name[name]] = "broken"
+-- 0424
+local name = "0424"
+hex_terrain[hex_name[name]] = "woods"
+-- 0425
+local name = "0425"
+hex_terrain[hex_name[name]] = "woods"
+-- 0426
+local name = "0426"
+hex_terrain[hex_name[name]] = "broken"
+-- 0427
+local name = "0427"
+hex_terrain[hex_name[name]] = "clear"
+-- 0428
+local name = "0428"
+hex_terrain[hex_name[name]] = "clear"
+-- 0429
+local name = "0429"
+hex_terrain[hex_name[name]] = "clear"
+
+
+
+-- 0501
+local name = "0501"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 0502
+local name = "0502"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 0503
+local name = "0503"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0504
+local name = "0504"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0505
+local name = "0505"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0506
+local name = "0506"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0507
+local name = "0507"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 0508
+local name = "0508"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0509
+local name = "0509"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0510
+local name = "0510"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0511
+local name = "0511"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0512
+local name = "0512"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0513
+local name = "0513"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0514
+local name = "0514"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0515
+local name = "0515"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0601
+local name = "0601"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0602
+local name = "0602"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0603
+local name = "0603"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0604
+local name = "0604"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0605
+local name = "0605"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0606
+local name = "0606"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0607
+local name = "0607"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 0608
+local name = "0608"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0609
+local name = "0609"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0610
+local name = "0610"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0611
+local name = "0611"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0612
+local name = "0612"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0613
+local name = "0613"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0614
+local name = "0614"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0615
+local name = "0615"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0701
+local name = "0701"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0702
+local name = "0702"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0703
+local name = "0703"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0704
+local name = "0704"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0705
+local name = "0705"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0706
+local name = "0706"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0707
+local name = "0707"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0708
+local name = "0708"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0709
+local name = "0709"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0710
+local name = "0710"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0711
+local name = "0711"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0712
+local name = "0712"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0713
+local name = "0713"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0714
+local name = "0714"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0715
+local name = "0715"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 0801
+local name = "0801"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0802
+local name = "0802"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0803
+local name = "0803"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0804
+local name = "0804"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0805
+local name = "0805"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0806
+local name = "0806"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0807
+local name = "0807"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 0808
+local name = "0808"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0809
+local name = "0809"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0810
+local name = "0810"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0811
+local name = "0811"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0812
+local name = "0812"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0813
+local name = "0813"
+hex_terrain["393c5c"] = "broken"
+
+
+-- 0814
+local name = "0814"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0815
+local name = "0815"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 0902
+local name = "0902"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0903
+local name = "0903"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0904
+local name = "0904"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 0905
+local name = "0905"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0906
+local name = "0906"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 0907
+local name = "0907"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 0908
+local name = "0908"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 0909
+local name = "0909"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 0910
+hex_terrain["585730"] = "woods"
+
+-- 0911
+hex_terrain["f37470"] = "forest"
+
+-- 0912
+hex_terrain["e2c7d6"] = "forest"
+
+-- 0913
+hex_terrain["d12a45"] = "forest"
+
+-- 0914
+local name = "0914"
+hex_terrain["4b524c"] = "woods"
+
+-- 0915
+local name = "0915"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1001
+local name = "1001"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1002
+local name = "1002"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 1003
+local name = "1003"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1004
+local name = "1004"
+hex_terrain[hex_name[name]] = "broken"
+
+
+-- 1005
+local name = "1005"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1006
+local name = "1006"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1007
+local name = "1007"
+hex_terrain[hex_name[name]] = "clear"
+
+-- 1008
+local name = "1008"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1009
+hex_terrain["5839d5"] = "clear"
+
+-- 1010
+hex_terrain["02bd93"] = "forest"
+
+-- 1011
+hex_terrain["9dc118"] = "forest"
+
+-- 1012
+hex_terrain["6cfeeb"] = "broken"
+
+-- 1013
+hex_terrain["b0f0fc"] = "forest"
+
+-- 1014
+local name = "1014"
+hex_terrain["c6a041"] = "broken"
+
+-- 1015
+local name = "1015"
+hex_terrain[hex_name[name]] = "broken"
+
+---------------
+
+-- 1102
+local name = "1102"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1103
+local name = "1103"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 1104
+local name = "1104"
+hex_terrain[hex_name[name]] = "forest"
+
+
+-- 1105
+local name = "1105"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1106
+local name = "1106"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 1107
+local name = "1107"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 1108
+local name = "1108"
+hex_terrain[hex_name[name]] = "broken"
+
+
+-- 1109
+local name = "1109"
+hex_terrain[hex_name[name]] = "broken"
+
+
+
+-- 1110
+hex_terrain["b3de30"] = "broken"
+
+
+-- 1111
+hex_terrain["598613"] = "forest"
+
+
+
+-- 1112
+hex_terrain["195d56"] = "woods"
+
+
+--1113
+hex_terrain["d93c33"] = "forest"
+
+
+
+
+--1114
+hex_terrain["14139c"] = "broken"
+
+
+
+--1115
+hex_terrain["aa20e6"] = "woods"
+
+
+
+-- 1201
+local name = "1201"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 1202
+local name = "1202"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1203
+local name = "1203"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 1204
+local name = "1204"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1205
+local name = "1205"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 1206
+local name = "1206"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1207
+local name = "1207"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 1208
+local name = "1208"
+
+hex_terrain[hex_name[name]] = "broken"
+
+
+
+-- 1209
+hex_terrain["f76346"] = "clear"
+
+-- 1210
+hex_terrain["88168f"] = "broken"
+
+-- 1211
+hex_terrain["e463d6"] = "broken"
+
+
+-- 1212
+hex_terrain["bfbd8c"] = "broken"
+
+-- 1213
+hex_terrain["b970ef"] = "broken"
+
+-- 1214
+hex_terrain["a78fc0"] = "woods"
+
+-- 1215
+hex_terrain["57bb0d"] = "broken"
+
+-- 1302
+local name = "1302"
+hex_terrain[hex_name[name]] = "clear"
+
+
+-- 1303
+local name = "1303"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 1304
+local name = "1304"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1305
+local name = "1305"
+hex_terrain[hex_name[name]] = "forest"
+
+-- 1306
+local name = "1306"
+hex_terrain[hex_name[name]] = "broken"
+
+
+
+-- 1307
+local name = "1307"
+hex_terrain[hex_name[name]] = "forest"
+
+
+-- 1308
+local name = "1308"
+hex_terrain[hex_name[name]] = "forest"
+
+
+-- 1309
+local name = "1309"
+hex_terrain[hex_name[name]] = "broken"
+
+
+
+-- 1310
+local name = "1310"
+hex_terrain[hex_name[name]] = "clear"
+
+
+-- 1311
+hex_terrain["c5b010"] = "broken"
+
+
+-- 1312
+hex_terrain["d92e91"] = "forest"
+
+
+
+-- 1313
+hex_terrain["b6d331"] = "broken"
+
+
+
+
+-- 1314
+hex_terrain["290b1d"] = "forest"
+
+
+-- 1315
+hex_terrain["b4b0f5"] = "woods"
+
+
+-- 1401
+local name = "1401"
+hex_terrain[hex_name[name]] = "broken"
+
+
+-- 1402
+local name = "1402"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1403
+local name = "1403"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 1404
+local name = "1404"
+hex_terrain[hex_name[name]] = "broken"
+
+
+-- 1405
+local name = "1405"
+hex_terrain[hex_name[name]] = "woods"
+
+
+-- 1406
+local name = "1406"
+hex_terrain[hex_name[name]] = "broken"
+
+
+-- 1407
+local name = "1407"
+hex_terrain[hex_name[name]] = "forest"
+
+
+
+-- 1408
+local name = "1408"
+hex_terrain[hex_name[name]] = "broken"
+
+
+-- 1409
+local name = "1409"
+hex_terrain[hex_name[name]] = "clear"
+
+
+-- 1410
+local name = "1410"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1411
+hex_terrain["99c3ee"] = "woods"
+
+-- 1412
+hex_terrain["9b8f6a"] = "woods"
+
+-- 1413
+hex_terrain["b6cd88"] = "woods"
+
+-- 1414
+hex_terrain["70b0bd"] = "woods"
+
+
+-- 1508
+local name = "1508"
+hex_terrain[hex_name[name]] = "woods"
+-- 1509
+local name = "1509"
+hex_terrain[hex_name[name]] = "broken"
+-- 1510
+local name = "1510"
+hex_terrain[hex_name[name]] = "broken"
+-- 1511
+local name = "1511"
+hex_terrain[hex_name[name]] = "woods"
+-- 1512
+local name = "1512"
+hex_terrain[hex_name[name]] = "woods"
+
+-- 1513
+local name = "1513"
+hex_terrain[hex_name[name]] = "broken"
+
+-- 1514
+hex_terrain["6aafc5"] = "woods"
+
+
+
+return hex_terrain
