@@ -350,135 +350,192 @@ hex_terrain[hex_name[name]] = "clear"
 -- 0501
 local name = "0501"
 hex_terrain[hex_name[name]] = "clear"
-
 -- 0502
 local name = "0502"
 hex_terrain[hex_name[name]] = "clear"
-
 -- 0503
 local name = "0503"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0504
 local name = "0504"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0505
 local name = "0505"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0506
 local name = "0506"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0507
 local name = "0507"
 hex_terrain[hex_name[name]] = "clear"
-
 -- 0508
 local name = "0508"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0509
 local name = "0509"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0510
 local name = "0510"
 hex_terrain[hex_name[name]] = "woods"
-
 -- 0511
 local name = "0511"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0512
 local name = "0512"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0513
 local name = "0513"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0514
 local name = "0514"
 hex_terrain[hex_name[name]] = "woods"
-
 -- 0515
 local name = "0515"
 hex_terrain[hex_name[name]] = "woods"
+-- 0516
+local name = "0516"
+hex_terrain[hex_name[name]] = "broken"
+-- 0517
+local name = "0517"
+hex_terrain[hex_name[name]] = "woods"
+-- 0518
+local name = "0518"
+hex_terrain[hex_name[name]] = "woods"
+-- 0519
+local name = "0519"
+hex_terrain[hex_name[name]] = "clear"
+-- 0520
+local name = "0520"
+hex_terrain[hex_name[name]] = "woods"
+-- 0521
+local name = "0521"
+hex_terrain[hex_name[name]] = "city"
+-- 0522
+local name = "0522"
+hex_terrain[hex_name[name]] = "forest"
+-- 0523
+local name = "0523"
+hex_terrain[hex_name[name]] = "woods"
+-- 0524
+local name = "0524"
+hex_terrain[hex_name[name]] = "broken"
+-- 0525
+local name = "0525"
+hex_terrain[hex_name[name]] = "broken"
+-- 0526
+local name = "0526"
+hex_terrain[hex_name[name]] = "broken"
+-- 0527
+local name = "0527"
+hex_terrain[hex_name[name]] = "city"
+-- 0528
+local name = "0528"
+hex_terrain[hex_name[name]] = "woods"
+-- 0529
+local name = "0529"
+hex_terrain[hex_name[name]] = "broken"
+-- 0530
+local name = "0530"
+hex_terrain[hex_name[name]] = "clear"
 
 -- 0601
 local name = "0601"
 hex_terrain[hex_name[name]] = "woods"
-
 -- 0602
 local name = "0602"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0603
 local name = "0603"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0604
 local name = "0604"
 hex_terrain[hex_name[name]] = "woods"
-
 -- 0605
 local name = "0605"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0606
 local name = "0606"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0607
 local name = "0607"
 hex_terrain[hex_name[name]] = "clear"
-
 -- 0608
 local name = "0608"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0609
 local name = "0609"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0610
 local name = "0610"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0611
 local name = "0611"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0612
 local name = "0612"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0613
 local name = "0613"
 hex_terrain[hex_name[name]] = "forest"
-
 -- 0614
 local name = "0614"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0615
 local name = "0615"
 hex_terrain[hex_name[name]] = "broken"
+-- 0616
+local name = "0616"
+hex_terrain[hex_name[name]] = "woods"
+-- 0617
+local name = "0617"
+hex_terrain[hex_name[name]] = "broken"
+-- 0618
+local name = "0618"
+hex_terrain[hex_name[name]] = "forest"
+-- 0619
+local name = "0619"
+hex_terrain[hex_name[name]] = "woods"
+-- 0620
+local name = "0620"
+hex_terrain[hex_name[name]] = "broken"
+-- 0621
+local name = "0621"
+hex_terrain[hex_name[name]] = "woods"
+-- 0622
+local name = "0622"
+hex_terrain[hex_name[name]] = "woods"
+-- 0623
+local name = "0623"
+hex_terrain[hex_name[name]] = "woods"
+-- 0624
+local name = "0624"
+hex_terrain[hex_name[name]] = "woods"
+-- 0625
+local name = "0625"
+hex_terrain[hex_name[name]] = "broken"
+-- 0626
+local name = "0626"
+hex_terrain[hex_name[name]] = "city"
+-- 0627
+local name = "0627"
+hex_terrain[hex_name[name]] = "woods"
+-- 0628
+local name = "0628"
+hex_terrain[hex_name[name]] = "broken"
+-- 0629
+local name = "0629"
+hex_terrain[hex_name[name]] = "woods"
+
 
 -- 0701
 local name = "0701"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0702
 local name = "0702"
 hex_terrain[hex_name[name]] = "broken"
-
 -- 0703
 local name = "0703"
 hex_terrain[hex_name[name]] = "woods"
-
 -- 0704
 local name = "0704"
 hex_terrain[hex_name[name]] = "forest"

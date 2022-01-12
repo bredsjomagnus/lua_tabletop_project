@@ -54,6 +54,9 @@ function func.updateHexControl(hex_units, hex_neighbours, hex_control, hex_town)
           zoc = unit_desc["zoc_1"]
         end
 
+        -- -- print(u.getName())
+        -- print(hex_town[hex_guid])
+        -- print("kommer hit")
         -- kolla om en enhet som har [x] str uppåt
         -- är placerad in en stad, då det avgör zoc.
         if zoc == "false" and hex_town[hex_guid] then

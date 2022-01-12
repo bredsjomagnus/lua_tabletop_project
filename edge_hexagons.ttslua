@@ -1,0 +1,16 @@
+hex_names = require("hex_names")
+
+local allied_northern_edge = {}
+local allied_western_edge = {}
+local allied_souther_edge = {}
+
+for hex_number, hex_guid in pairs(hex_names) do
+  -- k hexnumret
+  -- v hex_guid
+  if string.sub(hex_number, 1, 2) == "01" then
+    table.insert(allied_northern_edge, hex_guid)
+  end
+end
+table.insert(allied_norther_edge, hex_names["0205"])
+table.insert(allied_norther_edge, hex_names["0206"])
+table.insert(allied_norther_edge, hex_names["0207"])
