@@ -2355,8 +2355,8 @@ hex_city[hex_name[name]] = false
 hex_town[hex_name[name]] = false
 hex_westwall[hex_name[name]] = false
 hex_vp[hex_name[name]] = 0
-hex_hv[hex_name[name]] = 2
-hex_allied_position[hex_name[name]] = true
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
 hex_units[hex_name[name]] = {}
 hex_control[hex_name[name]] = {}
 hex_primary_forward[hex_name[name]] = hex_name[dir["3"]]
@@ -15387,6 +15387,1463 @@ hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
 hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
 hex_withdraw[hex_name[name]] = nil
 
+-- 2001
+local name = "2001"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  "borderedge",
+  hex_terrains[hex_name[dir["3"]]],
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2002
+local name = "2002"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2003
+local name = "2003"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "river",
+  "river",
+  "river"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2004
+local name = "2004"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  "river",
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2005
+local name = "2005"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2006
+local name = "2006"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  "river",
+  "river",
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2007
+local name = "2007"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "bridge",
+  "river",
+  "road",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = true
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 3
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2008
+local name = "2008"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  "river",
+  "river",
+  "river"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2009
+local name = "2009"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "river",
+  "river",
+  "river",
+  "river",
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 3
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2010
+local name = "2010"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  "river",
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 1
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2011
+local name = "2011"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  hex_terrains[hex_name[dir["4"]]],
+  "road",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2012
+local name = "2012"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  "road",
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2013
+local name = "2013"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2014
+local name = "2014"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2015
+local name = "2015"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2016
+local name = "2016"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2017
+local name = "2017"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["6"]]
+
+-- 2018
+local name = "2018"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  "road",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2019
+local name = "2019"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  "road",
+  "road",
+  "road",
+  "road",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = true
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 4
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2020
+local name = "2020"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  "road",
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 1
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2021
+local name = "2021"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2022
+local name = "2022"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2023
+local name = "2023"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "borderedge",
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2024
+local name = "2024"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  "borderedge",
+  "borderedge",
+  "borderedge",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = nil
+
+-- 2101
+local name = "2101"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "borderedge",
+  "borderedge",
+  "borderedge",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2102
+local name = "2102"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2103
+local name = "2103"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  "river",
+  "river",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2104
+local name = "2104"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "river",
+  "river",
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2105
+local name = "2105"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  "river",
+  "road",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2106
+local name = "2106"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  "road",
+  "river",
+  "river",
+  "bridge",
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = true
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = nil
+hex_secondary_forward[hex_name[name]] = nil
+hex_withdraw[hex_name[name]] = nil
+
+-- 2107
+local name = "2107"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "river",
+  "bridge",
+  "river",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2108
+local name = "2108"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  "river",
+  "river",
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["3"]]
+
+-- 2109
+local name = "2109"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "river",
+  "river",
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  "river"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["3"]]
+
+-- 2110
+local name = "2110"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "river",
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  "bridge",
+  "river"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["5"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2111
+local name = "2111"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  "bridge",
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 3
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2112
+local name = "2112"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  "river",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2113
+local name = "2113"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2114
+local name = "2114"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 3
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2115
+local name = "2115"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2116
+local name = "2116"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2117
+local name = "2117"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  "road",
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 1
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2118
+local name = "2118"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2119
+local name = "2119"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  hex_terrains[hex_name[dir["2"]]],
+  "road",
+  hex_terrains[hex_name[dir["4"]]],
+  hex_terrains[hex_name[dir["5"]]],
+  "road"
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 1
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["6"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["4"]]
+
+-- 2120
+local name = "2120"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  "road",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = true
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2121
+local name = "2121"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  "road",
+  hex_terrains[hex_name[dir["3"]]],
+  hex_terrains[hex_name[dir["4"]]],
+  "road",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 2
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["5"]]
+
+-- 2122
+local name = "2122"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  hex_terrains[hex_name[dir["1"]]],
+  "road",
+  "road",
+  "borderedge",
+  hex_terrains[hex_name[dir["5"]]],
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_withdraw[hex_name[name]] = hex_name[dir["6"]]
+
+-- 2123
+local name = "2123"
+dir = hexfunc.getNeighbours(name)
+hex_edges[hex_name[name]] = {
+  "road",
+  hex_terrains[hex_name[dir["2"]]],
+  "borderedge",
+  "borderedge",
+  "borderedge",
+  hex_terrains[hex_name[dir["6"]]]
+}
+hex_neighbours[hex_name[name]] = {
+  hex_name[dir["1"]],
+  hex_name[dir["2"]],
+  hex_name[dir["3"]],
+  hex_name[dir["4"]],
+  hex_name[dir["5"]],
+  hex_name[dir["6"]]
+  }
+hex_city[hex_name[name]] = false
+hex_town[hex_name[name]] = false
+hex_westwall[hex_name[name]] = false
+hex_vp[hex_name[name]] = 0
+hex_hv[hex_name[name]] = 0
+hex_allied_position[hex_name[name]] = false
+hex_units[hex_name[name]] = {}
+hex_control[hex_name[name]] = {}
+hex_primary_forward[hex_name[name]] = hex_name[dir["1"]]
+hex_secondary_forward[hex_name[name]] = hex_name[dir["2"]]
+hex_withdraw[hex_name[name]] = nil
+
 
 table.insert(hexagons, #hexagons+1, hex_terrains)           -- 1
 table.insert(hexagons, #hexagons+1, hex_edges)              -- 2
@@ -15396,6 +16853,7 @@ table.insert(hexagons, #hexagons+1, hex_control)            -- 5
 table.insert(hexagons, #hexagons+1, hex_town)               -- 6
 table.insert(hexagons, #hexagons+1, hex_allied_position)    -- 7
 table.insert(hexagons, #hexagons+1, hex_city)               -- 8
+table.insert(hexagons, #hexagons+1, hex_hv)               -- 9
 
 
 return hexagons
